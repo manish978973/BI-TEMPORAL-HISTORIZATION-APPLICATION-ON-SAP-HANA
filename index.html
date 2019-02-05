@@ -1,0 +1,38 @@
+<!DOCTYPE html>  
+<html><head>  
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />  
+    <title>MVC Hello World</title>  
+  
+    <script id='sap-ui-bootstrap' type='text/javascript'  
+        src='/sap/ui5/1/resources/sap-ui-core.js'  
+        data-sap-ui-theme='sap_bluecrystal'  
+        data-sap-ui-libs='sap.m'></script>   
+  
+<script>  
+    //var btn = new sap.ui.commons.Button({  
+        //text:'Hello World',  
+        //press:function(){alert('Hello!')}  
+    //});  
+    //btn.placeAt('content');  
+    
+    
+    // tells SAPUI5 where to look for resources
+sap.ui.localResources("content");
+// creates an instance of our view
+content_view = sap.ui.view({
+// unique identifier for this instance
+id:"idmain1",
+// location and name of the view
+viewName:"content.Welcome1",
+// type of the view, i.e. XML, JavaScript, JSON...
+type:sap.ui.core.mvc.ViewType.XML
+});
+// places the output of our view on this page
+content_view.placeAt("uiArea");
+</script>
+
+</head>
+<body class='sapUiBody'>
+    <div id='uiArea'></div>
+</body>
+</html>

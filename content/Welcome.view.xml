@@ -1,0 +1,146 @@
+<!-- this is a comment. in the next tag, the xmlns tags define namespaces, the name after of the equality signs being the name of the namespace. In the code below, we can use this name instead of the full path -->
+<mvc:View controllerName="content.Welcome"
+xmlns="sap.m"
+xmlns:mvc="sap.ui.core.mvc"
+xmlns:table="sap.ui.table"
+xmlns:l="sap.ui.commons.layout"
+xmlns:html="http://www.w3.org/1999/xhtml">
+
+<!-- view content goes here -->
+<!-- this HTML paragraph is used as a spacer -->
+<html:p/>
+<!-- here we have the definition of the table.
+Next to different settings for the appearance
+and behavior of the table, we bind the endpoint
+/Sales of our data source to our rows -->
+ <Toolbar>
+            <Title text="{i18n>invoiceListTitle}"/>
+            <ToolbarSpacer/>
+            <SearchField width="50%" search="onFilterInvoices"/>
+         </Toolbar>
+
+<Button
+							text="clear"
+							tooltip="Clear all filters"
+							press="clearAllFilters"/>
+
+<table:Table
+id="salesOrdersTable"
+visibleRowCount="10"
+selectionMode="Single"
+navigationMode="Paginator"
+editable="false"
+rows="{/History}">
+
+
+
+      
+      
+      
+<!-- this defines one column in the table. The property
+"sortProperty" defines the column of the data source on
+which the column will sort -->
+<table:Column sortProperty="PERSON_NAME">
+<!-- the label is shown in the header of the table -->
+<table:label>
+<Label text="PERSON_NAME" design="Bold"/>
+</table:label>
+<!-- for each column, a template is required which
+defines how how the data is visualized -->
+<table:template>
+<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+<Label text="{PERSON_NAME}"/>
+</table:template>
+</table:Column>
+
+<table:Column sortProperty="CITY">
+<!-- the label is shown in the header of the table -->
+<table:label>
+<Label text="CITY" design="Bold"/>
+</table:label>
+<!-- for each column, a template is required which
+defines how how the data is visualized -->
+<table:template>
+<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+<Label text="{CITY}"/>
+</table:template>
+</table:Column>
+
+<table:Column sortProperty="BUSINESS_VALID_FROM">
+<!-- the label is shown in the header of the table -->
+<table:label>
+<Label text="BUSINESS_VALID_FROM" design="Bold"/>
+</table:label>
+<!-- for each column, a template is required which
+defines how how the data is visualized -->
+<table:template>
+<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+<Label text="{BUSINESS_VALID_FROM}"/>
+</table:template>
+</table:Column>
+<table:Column sortProperty="BUSINESS_VALID_TO">
+<!-- the label is shown in the header of the table -->
+<table:label>
+<Label text="BUSINESS_VALID_TO" design="Bold"/>
+</table:label>
+<!-- for each column, a template is required which
+defines how how the data is visualized -->
+<table:template>
+<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+<Label text="{BUSINESS_VALID_TO}"/>
+</table:template>
+</table:Column>
+
+
+<table:Column sortProperty="TECHNNICAL_VALID_FROM">
+<!-- the label is shown in the header of the table -->
+<table:label>
+<Label text="TEHNICAL_VALID_FROM" design="Bold"/>
+</table:label>
+<!-- for each column, a template is required which
+defines how how the data is visualized -->
+<table:template>
+<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+<Label text="{TECHNICAL_VALID_FROM}"/>
+</table:template>
+</table:Column>
+
+<table:Column sortProperty="TECHNICAL_VALID_TO">
+<!-- the label is shown in the header of the table -->
+<table:label>
+<Label text="TECHNICAL_VALID_TO" design="Bold"/>
+</table:label>
+<!-- for each column, a template is required which
+defines how how the data is visualized -->
+<table:template>
+<!-- this label defines the actual content (aka the
+rows) that are shown in the table. here, we bind the
+column CUSTOMER_NAME of the data source
+to this table column -->
+<Label text="{TECHNICAL_VALID_TO}"/>
+</table:template>
+</table:Column>
+
+
+
+
+</table:Table>
+
+<html:p/>
+
+</mvc:View>
