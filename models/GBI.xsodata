@@ -1,6 +1,10 @@
 service{
  "GBI_008"."HISTORYTABLE1" as "History";
  
+ "gbi-student-008.MVCHelloWorld::CUSTOMER_RAM_CV_008" as "Historycp"
+  keys generate local "ID"
+ aggregates always;
+ 
  "gbi-student-008::CUSTOMER_MAR_CV_008" as "Historycv"
  keys generate local "ID"
  aggregates always;
