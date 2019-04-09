@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Bi-Temporal Historization Data Model</title>
+    <link rel="shortcut icon" href="/gbi-student-007/Bi-Temporal_Historization/UI5_app/content/Images/ui5Logo.png" />
+    <!-- load SAPUI5 (from local server), 
+		select theme and control library -->
+		
+	<!-- the complex binding is required for the 
+	    VizFrame visualization --> 	
+    <script id="sap-ui-bootstrap"
+        type="text/javascript"
+		data-sap-ui-libs="sap.m"
+		src="/sap/ui5/1/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_bluecrystal"
+
+	
+        data-sap-ui-language="en"
+        data-sap-ui-xx-bindingSyntax='complex'></script>
+
+    <!-- this section is used to start the application-->
+    <script>
+        // here we want to load our Main view
+        
+        // tell SAPUI5 where to look for resources
+        sap.ui.localResources("content");
+        // create an instance of our view
+        content_view = sap.ui.view({
+        	// unique identifier for this instance
+        	id:"idmain1", 
+        	// location and name of the view
+        	viewName:"content.BiTemporal_full", 
+        	// type of the view, i.e. XML, JavaScript, JSON...
+        	type:sap.ui.core.mvc.ViewType.XML 
+        });
+        // place the output of our view on this page
+        content_view.placeAt("uiArea");
+    </script>
+
+</head>
+<body class="sapUiBody">
+
+
+ 
+  	<div id="uiArea">
+		<!-- content area -->
+	</div>
+
+</body>
+</html>

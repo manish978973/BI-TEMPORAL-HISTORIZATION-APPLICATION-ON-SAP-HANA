@@ -1,0 +1,9 @@
+table.schemaName = "GBI_008";
+table.tableType = COLUMNSTORE;
+table.columns = [
+{name = "CUSTOMER"; sqlType = NVARCHAR; length = 8; },
+{name = "FIRSTNAME"; sqlType = NVARCHAR; length = 40; },
+{name = "LASTNAME"; sqlType = NVARCHAR; length = 40; },
+{name = "REVENUE"; sqlType = BIGINT;  }
+];
+table.primaryKey.pkcolumns = ["CUSTOMER"];

@@ -1,0 +1,8 @@
+import = [
+{
+hdbtable = "gbi-student-008.MVCHelloWorld::data";                   
+file = "gbi-student-008.MVCHelloWorld:saphanaupload.csv";    
+header = true;
+delimField = ",";
+}
+];

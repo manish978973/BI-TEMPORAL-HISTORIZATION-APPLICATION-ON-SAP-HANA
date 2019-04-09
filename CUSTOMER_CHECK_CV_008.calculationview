@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CUSTOMER_CHECK_CV_008" applyPrivilegeType="ANALYTIC_PRIVILEGE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="2.3" defaultClient="$$client$$" visibility="internal" outputViewType="Projection" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="CUSTOMER_CHECK_CV_008"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="HISTORYTABLE1" type="DATA_BASE_TABLE">
+    <viewAttributes allViewAttributes="true"/>
+    <columnObject schemaName="GBI_008" columnObjectName="HISTORYTABLE1"/>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1" filterExpressionLanguage="COLUMN_ENGINE">
+    <viewAttributes>
+      <viewAttribute id="BUSINESS_VALID_TO"/>
+      <viewAttribute id="TECHNICAL_VALID_FROM"/>
+      <viewAttribute id="PERSON_NAME"/>
+      <viewAttribute id="TECHNICAL_VALID_TO"/>
+      <viewAttribute id="CITY"/>
+      <viewAttribute id="BUSINESS_VALID_FROM"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="#HISTORYTABLE1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="BUSINESS_VALID_TO" source="BUSINESS_VALID_TO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TECHNICAL_VALID_FROM" source="TECHNICAL_VALID_FROM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PERSON_NAME" source="PERSON_NAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TECHNICAL_VALID_TO" source="TECHNICAL_VALID_TO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BUSINESS_VALID_FROM" source="BUSINESS_VALID_FROM"/>
+    </input>
+    <filter>&quot;TECHNICAL_VALID_TO&quot;=99991231 and &quot;BUSINESS_VALID_TO&quot;=99991231</filter>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="BUSINESS_VALID_FROM" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BUSINESS_VALID_FROM"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BUSINESS_VALID_FROM"/>
+    </attribute>
+    <attribute id="CITY" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CITY"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CITY"/>
+    </attribute>
+    <attribute id="PERSON_NAME" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PERSON_NAME"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PERSON_NAME"/>
+    </attribute>
+    <attribute id="BUSINESS_VALID_TO" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BUSINESS_VALID_TO"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BUSINESS_VALID_TO"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="false" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="86" y="256"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

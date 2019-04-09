@@ -1,0 +1,132 @@
+<mvc:View
+	controllerName="content.BiTemporal_all"
+	xmlns="sap.ui.table"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:m="sap.m"
+    xmlns:l="sap.ui.commons.layout"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    height="100%">
+    
+	<m:Page
+	    
+		class="sapUiContentPadding"
+		enableScrolling="false">
+        <m:customHeader>
+		    <m:Bar>
+		        <m:contentLeft>
+		            <html:a href="/gbi-student-008/MVCHelloWorld/index.html" >
+                	   <m:Button tooltip="Home" icon="sap-icon://home"/>
+                    </html:a>
+		        </m:contentLeft>
+		
+		        <m:contentMiddle>
+		            <m:Text text = "BI-TEMPORAL HISTORIZATION DATA MODEL"></m:Text>
+		        </m:contentMiddle>
+		
+		        <m:contentRight>
+		            <m:Image src="/gbi-student-008/MVCHelloWorld/content/Images/sap.jpg" width="60px" height="30px"></m:Image>
+		        </m:contentRight>		
+		    </m:Bar>
+		</m:customHeader>
+		<m:content>
+
+			<Table
+				id="table"
+				selectionMode="MultiToggle"
+				rows="{/Historyactive}"
+				visibleRowCount="15"
+				
+				ariaLabelledBy="title">
+				
+				<toolbar>
+					<m:Toolbar>
+						
+		                  <m:Text text='Present Record of All Customers'></m:Text>
+		                
+						<m:ToolbarSpacer/>
+						
+						<m:Button text="Clear" tooltip="Clear all filters" press="clearAllFilters"/>
+						<m:ToolbarSeparator/>
+						<m:SearchField placeholder="Customer ID" id="IDFilter" search="onFilter2Invoices" width="15rem"/>
+						<m:ToolbarSeparator/>	
+						<m:SearchField placeholder="Customer Name" id="NameFilter" search="onFilter3Invoices" width="15rem"/>
+						<m:ToolbarSeparator/>
+						<m:SearchField placeholder="City" id="CityFilter"  search="onFilter1Invoices" width="15rem"/>
+					</m:Toolbar>
+					
+				</toolbar>
+				
+				<columns>
+				
+					<Column
+						width="3.5rem"
+						filterProperty="CUSTOMER_NUMBER">
+						<m:Label text="Customer ID" />
+						<template>
+							<m:Text text="{CUSTOMER_NUMBER}" wrapping="false" />
+						</template>
+					</Column>
+					
+					<Column
+						width="4.5rem"
+						filterProperty="CUSTOMER_NAME"
+						defaultFilterOperator="StartsWith">
+						<m:Label text="Customer Name" />
+						<template>
+							<m:Text text="{CUSTOMER_NAME}" wrapping="false" />
+						</template>
+					</Column>
+					
+					<Column
+						width="3rem"
+						filterProperty="CITY"
+						defaultFilterOperator="StartsWith">
+						<m:Label text="City" />
+						<template>
+							<m:Text text="{CITY}" wrapping="false" />
+						</template>
+					</Column>
+					
+				
+					
+					<Column
+						width="6rem"
+						hAlign="End"
+						sortProperty="BUSINESS_VALID_FROM">
+						<m:Label text="Business Valid From" />
+						<template>
+							<m:Text text="{path: 'BUSINESS_VALID_FROM',type: 'sap.ui.model.type.Date',formatOptions: {style: 'medium'} }" wrapping="false" />
+						</template>
+					</Column>
+					
+					<Column
+						width="6rem"
+						hAlign="End">
+						<m:Label text="Business Valid To" />
+						<template>
+							<m:Text text="{path: 'BUSINESS_VALID_TO',type: 'sap.ui.model.type.Date',formatOptions: {style: 'medium'} }" wrapping="false" />
+						</template>
+					</Column>
+					
+					
+					
+				</columns>
+				
+			</Table>
+			<html:p/> <html:p/>
+			
+			
+			
+		</m:content>
+		
+		<m:Bar>
+		  <m:contentRight>
+		  <m:Link text='Current_Records' href='https://h02-d03.ucc.ovgu.de/gbi-student-008/MVCHelloWorld/CurrentRecords.html'></m:Link>
+		  </m:contentRight>
+		</m:Bar>
+					
+					
+	</m:Page>
+	
+	
+</mvc:View>
