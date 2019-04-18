@@ -37,7 +37,7 @@ xmlns:m="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/x
                     </html:a>
 
                     <html:a href="/gbi-student-008/MVCHelloWorld/ActiveRecords.html" >
-                        <html:img src="/gbi-student-008/MVCHelloWorld/content/Images/activerecords.png" alt="Active Records" hspace="20" width="220px%" height="220px" class="zoom"/>
+                        <html:img src="/gbi-student-008/MVCHelloWorld/content/Images/activerecords.png" alt="Active Records" hspace="20" width="220px" height="220px" class="zoom"/>
                     </html:a>
 
                     <html:a href="/gbi-student-008/MVCHelloWorld/CurrentRecords.html" >
