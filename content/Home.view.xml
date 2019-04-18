@@ -32,7 +32,7 @@ xmlns:m="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/x
 		<m:content>
             <html:br/><html:br/><html:br/><html:br/>
         	<html:center>
-                	<html:a href="/gbi-student-007/Bi-Temporal_Historization/UI5_app/CompleteRecords.html">
+                	<html:a href="/gbi-student-008/MVCHelloWorld/CompleteRecords.html">
                 	    <html:img src="/gbi-student-008/MVCHelloWorld/content/Images/allrecords.jpg" alt="Complete Records" height="220px" class="zoom" />
                     </html:a>
 

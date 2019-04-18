@@ -29,7 +29,7 @@ id="salesOrdersTable"
 visibleRowCount="10"
 selectionMode="Single"
 navigationMode="Paginator"
-editable="false"
+editable="true"
 rows="{/History}">
 
 
