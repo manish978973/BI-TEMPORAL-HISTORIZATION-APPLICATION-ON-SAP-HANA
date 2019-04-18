@@ -6,4 +6,4 @@
 
 <h2>SCREENSHOT OF SAP UI5 APPLICATION</h2>
 
-<image src="" alt="image2"> 
+<image src="SAPHANA/content/Images/UI5.PNG" alt="image2"> 
