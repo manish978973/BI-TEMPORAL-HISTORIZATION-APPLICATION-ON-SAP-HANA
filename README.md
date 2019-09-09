@@ -24,10 +24,14 @@ particular instance of time. The Business user should be also able to perform co
 
 The application contains a CSV file named CustomerDetails.csv which in turn contains the customer details like the Customer number, Name, his/her Business Validity Date and Location details
 
+![alt text](https://github.com/manish978973/SAPHANA/blob/master/Images/csv.PNG "Logo Title Text 1")
+
 ### SPECIFICATION OF FLOW GRAPH
 
 The application contains a data flow graph named CSVtabelToStagingStore.hdbflowgraph to populate data into Customer_Staging_Store table from CustomerDetailsVirtualTable table. The data loaded into CustomerDetailsVirtualTable table from CSV file needs to be populated into
 Customer_Staging_Store. This functionality is implemented by designing a flow graph model.
+
+![alt text](https://github.com/manish978973/SAPHANA/blob/master/Images/flowgraph.PNG "Logo Title Text 1")
 
 ### SPECIFICATION OF CALCULATION VIEWS
 
@@ -96,3 +100,7 @@ The Client have the provision to search appropriate customer data in the bitempo
 <h2>SCREENSHOT OF SAP UI5 APPLICATION</h2>
 
 <image src="content/Images/UI5.PNG" alt="image2"> 
+  
+  
+ **Technical Table with full customer data**
+ ![alt text](https://github.com/manish978973/SAPHANA/blob/master/Images/biitemporalall.PNG "Logo Title Text 1")
