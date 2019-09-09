@@ -51,19 +51,19 @@ The view should visualize only the past and present correct details of the custo
 The application contains four stored procedures for implementing Bi-temporal concept in SAP
 HANA.
 
-Stored procedure 1 - biTemporalInsertStoredProcedure
+**Stored procedure 1** - biTemporalInsertStoredProcedure
 
-Stored procedure 2 - biTemporalCorrectionStoredProcedure
+**Stored procedure 2** - biTemporalCorrectionStoredProcedure
 
-Stored procedure 3 – biTemporalMainStoredProcedure
+**Stored procedure 3** – biTemporalMainStoredProcedure
 
-Stored procedure 4 – biTemporalHistorizationStoredProcedure
+**Stored procedure 4** – biTemporalHistorizationStoredProcedure
 
 The stored procedure biTemporalInsertStoredProcedure is used to insert fresh/new customers’ data into Customer_Technical table.
 
 The stored procedure biTemporalCorrectionStoredProcedure is used for updation, correction and deletion of data in the Customer_Technical table and hence implement the bi-temporal logic. 
 
-Updation is done as follows:
+**Updation** is done as follows:
 
 * Technically close the invalid business case by replacing technical_valid_to column from ‘9999-12-31’ to the specific date of edition.
 
@@ -71,13 +71,13 @@ Updation is done as follows:
 
 * Inserting the new and present business details of the customer with Business_valid_to and Technical_valid_to set as ‘9999-12-31’.
 
-Correction is done as follows:
+**Correction** is done as follows:
 
 * Technically close and update the invalid business cases with appropriate technical dates.
 
 * Insertion of new corrected data in the technical table.
 
-Deletion is done as follows:
+**Deletion** is done as follows:
 
 * Close all the Technical_Valid_To and Business_Valid_To dates of all the records of a
 customer to delete the customer.
