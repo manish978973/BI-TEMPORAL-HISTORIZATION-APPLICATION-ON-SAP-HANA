@@ -12,7 +12,9 @@ particular instance of time. The Business user should be also able to perform co
 
 ### DATA FLOW DIAGRAM
 
+<div align="center">
 ![alt text](https://github.com/manish978973/SAPHANA/blob/master/Images/Dataflow.PNG "Logo Title Text 1")
+ </div>
 
 ### SPECIFICATION OF TABLES IN SAP HANA DATABASE
 
